@@ -1,1 +1,48 @@
-
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>درس‌نامه‌ها</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Vazirmatn,Tahoma,sans-serif;background:#f6f7f9;color:#1c2230;
+       min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 16px}
+  .wrap{width:100%;max-width:720px}
+  h1{font-size:1.7rem;font-weight:900;text-align:center;margin-bottom:8px}
+  .sub{text-align:center;color:#6b7280;font-size:.95rem;margin-bottom:26px}
+  .grid{display:grid;gap:14px}
+  a.card{display:flex;align-items:center;gap:16px;background:#fff;border-radius:16px;
+         padding:20px 22px;text-decoration:none;color:inherit;border:1px solid #e8eaee;
+         box-shadow:0 1px 2px rgba(16,24,40,.04);transition:.15s}
+  a.card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(16,24,40,.08);border-color:#d7dbe2}
+  .ic{font-size:1.7rem;line-height:1}
+  .tt{font-weight:800;font-size:1.06rem}
+  .ds{color:#7b8494;font-size:.86rem;margin-top:3px}
+  .empty{background:#fff;border:1px dashed #d5d9e0;border-radius:16px;padding:26px;text-align:center;color:#8a92a0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📚 درس‌نامه‌ها</h1>
+  <div class="sub">هر درس یک پوشهٔ مستقل دارد</div>
+  <div class="grid" id="g"></div>
+</div>
+<script>
+var ITEMS = [
+  {t:'پاتولوژی بالینی', d:'بانک سؤالات ادوار — ۱۲۰ سؤال از ۴ دوره', u:'patho/', ic:'🩺'}
+];
+var g=document.getElementById('g');
+if(!ITEMS.length){ g.innerHTML='<div class="empty">هنوز درسی اضافه نشده</div>'; }
+ITEMS.forEach(function(it){
+  var a=document.createElement('a');
+  a.className='card'; a.href=it.u;
+  a.innerHTML='<div class="ic">'+it.ic+'</div><div><div class="tt">'+it.t+'</div><div class="ds">'+it.d+'</div></div>';
+  g.appendChild(a);
+});
+</script>
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a287a070aaff4e57bdc53d29661b3c5f"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
